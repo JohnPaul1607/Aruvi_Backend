@@ -5,27 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{% static 'Aruvilogo.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'media/Aruvilogo.png' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href="{% static 'Course.css' %}" rel="stylesheet" >
+    <link href="{% static 'css/Course.css' %}" rel="stylesheet" >
     <title>Aruvi Institute</title>
+    <style>
+        .card:nth-child(1) .card-image{
+            background-image: url("{% static 'media/Python.png' %}");
+        }
+        .card:nth-child(2) .card-image{
+            background-image: url("{% static '/media/Django.webp'%}");
+        }
+        .card:nth-child(3) .card-image{
+            background-image: url("{% static 'media/html.avif' %}");
+        }
+        .card:nth-child(4) .card-image{
+            background-image: url("{% static 'media/Datascience.jpeg' %}");
+        }
+        .card:nth-child(5) .card-image{
+            background-image: url("{% static 'media/machine.avif' %}");
+        }
+        .card:nth-child(6) .card-image{
+            background-image: url("{% static 'media/full.jpg' %}");
+        }
+        .card:nth-child(7) .card-image{
+            background-image: url("{% static 'media/cprogram.jpg' %}");
+        }
+        .card:nth-child(8) .card-image{
+            background-image: url("{% static 'media/java.webp' %}");
+        }
+    </style>
+    
 </head>
 <body>
     <!-- Header hgggggggghSection -->
     <nav>
         <div class="nav-links">
             <div class="nav-logo">
-                <img class="nav-logo-img" src="Image/Aruvilogo.png'" alt="Logo" width="48px" height="48px">
+                <img class="nav-logo-img" src="{% static 'media/Aruvilogo.png' %}" alt="Logo" width="48px" height="48px">
                 <label class="nav-logo-text">Aruvi</label>
             </div>
-
-            
             <ul class="mob-nav">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="Course.html">Course</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'course' %}">Course</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="">Registration</a></li>
             </ul>
             <div class="menu-btn">
                 <div class="line1"></div>
@@ -114,13 +140,14 @@
             
             <div class="footer-col">
                 <h4>MENU</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Course.html">Courses</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
+               <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'course' %}">Course</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="">Registration</a></li>
+            </ul>
             </div>
             <div class="footer-col">
                 <h4>IDLE DOWNLOAD</h4>
@@ -150,7 +177,7 @@
         <h3>Updated By <a href="https://www.instagram.com/crazy_phoenix_/" target="_blank"><span method=""> John</span></a></h3>
     </div>
 
-    <script src="js/js.js"></script>
+    <script src="{% static 'js/js.js' %}"></script>
 
 </body>
 </html>
