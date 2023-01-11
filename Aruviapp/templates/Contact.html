@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Image/Aruvilogo.png">
+    <link rel="icon" type="image/png" href="{% static 'media/Aruvilogo.png'%}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href="Styles/Contact.css" rel="stylesheet" >
+    <link href="{% static 'css/Contact.css'%}" rel="stylesheet" >
     <title>Aruvi Institute</title>
 </head>
 <body>
@@ -15,17 +16,16 @@
     <nav>
         <div class="nav-links">
             <div class="nav-logo">
-                <img class="nav-logo-img" src="Image/Aruvilogo.png" alt="Logo" width="48px" height="48px">
+                <img class="nav-logo-img" src="{% static 'media/Aruvilogo.png'%}" alt="Logo" width="48px" height="48px">
                 <label class="nav-logo-text">Aruvi</label>
             </div>
-
-            
             <ul class="mob-nav">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="Course.html">Course</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'course' %}">Course</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="">Registration</a></li>
             </ul>
             <div class="menu-btn">
                 <div class="line1"></div>
@@ -80,11 +80,12 @@
             <div class="footer-col">
                 <h4>MENU</h4>
                 <ul>
-                    <li><a href=index.html">HOME</a></li>
-                    <li><a href="Course.html">COURSES</a></li>
-                     <li><a href="Gallery.html">GALLERY</a></li>
-                    <li><a href="About.html">ABOUT</a></li>
-                    <li><a href="Contact.html">CONTACT</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'course' %}">Course</a></li>
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="">Registration</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -100,10 +101,10 @@
             <div class="footer-col">
                 <h4>COURSE</h4>
                 <ul>
-                    <li><a href="Course.html">python</a></li>
-                    <li><a href="Course.html">Data Science</a></li>
-                    <li><a href="Course.html">Tkinter</a></li>
-                    <li><a href="Course.html">Web Devlopment</a></li>
+                    <li><a href="{% url 'course' %}">python</a></li>
+                    <li><a href="{% url 'course' %}">Data Science</a></li>
+                    <li><a href="{% url 'course' %}">fullstack developer</a></li>
+                    <li><a href="{% url 'course' %}">Web Devlopment</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -123,8 +124,7 @@
         
 </footer>
 <div class="designed">
-    <h3 class="web">Web Designed By <a href="https://www.instagram.com/mr_white_spirit_/" target="_blank"><span>Puvan</span></a></h3>
+    <h3>Updated By <a href="https://www.instagram.com/crazy_phoenix_/" target="_blank"><span method=""> John</span></a></h3>
   </div>
-<script src="js/js.js"></script>
-</body>
+  <script src="{% static 'js/js.js' %}"></script></body>
 </html>

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kreon&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -142,30 +143,7 @@ h1{
     text-transform: capitalize;
     text-shadow: 1px 0px 2px #262654;
 }
-.card:nth-child(1) .card-image{
-    background-image: url(../Image/python.jpg);
-}
-.card:nth-child(2) .card-image{
-    background-image: url(../Image/django.jpg);
-}
-.card:nth-child(3) .card-image{
-    background-image: url(../Image/webdevop.jpg);
-}
-.card:nth-child(4) .card-image{
-    background-image: url(../Image/datascience.jpg);
-}
-.card:nth-child(5) .card-image{
-    background-image: url(../Image/machinelearning.jpg);
-}
-.card:nth-child(6) .card-image{
-    background-image: url(../Image/full.jpg);
-}
-.card:nth-child(7) .card-image{
-    background-image: url(../Image/c-logo.png);
-}
-.card:nth-child(8) .card-image{
-    background-image: url(../Image/java-logo.png);
-}
+
 .card:hover{
     background: var(--lightgreen);
     color: rgb(2, 71, 2);

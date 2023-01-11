@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load static%}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Image/Aruvilogo.png">
+    <link rel="icon" type="image/png" href="{% static 'media/Aruvilogo.png' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href="Styles/Gallery.css" rel="stylesheet" >
+    <link href="{% static 'css/Gallery.css' %}" rel="stylesheet" >
     <title>Aruvi Institute</title>
 </head>
 <body>
@@ -14,18 +15,19 @@
     <nav>
         <div class="nav-links">
             <div class="nav-logo">
-                <img class="nav-logo-img" src="Image/Aruvilogo.png" alt="Logo" width="48px" height="48px">
+                <img class="nav-logo-img" src="{% static 'media/Aruvilogo.png' %}" alt="Logo" width="48px" height="48px">
                 <label class="nav-logo-text">Aruvi</label>
             </div>
 
             
             <ul class="mob-nav">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="Course.html">Course</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
+              <li><a class="active" href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'course' %}">Course</a></li>
+              <li><a href="{% url 'gallery' %}">Gallery</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+              <li><a href="">Registration</a></li>
+          </ul>
             <div class="menu-btn">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -40,164 +42,88 @@
     <h1>Aruvi Institute Gallery</h1>
     <section class="photo-grid-container">
       <div class="photo-grid-item">
-        <img src="Image/Gallery/BBB.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/CCC.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img class="span"src="Image/Gallery/EEE.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/1.jpg" alt="" />
-      </div>
-      
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/15.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/10.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/11.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/12.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/13.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/14.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/AAA.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/16.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/17.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/18.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/19.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/2.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/20.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/21.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/22.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/23.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/24.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/25.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/26.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/27.jpg" alt="" />
+        <img src="{% static 'media/gr1.jpg' %}" alt="" />
       </div>
       <div class="photo-grid-item">
-        <img src="Image/Gallery/28.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/29.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/3.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/30.jpg" alt="" />
+        <img src="{% static 'media/gr2.jpeg' %}" alt="" />
       </div>
       <div class="photo-grid-item">
-        <img src="Image/Gallery/31.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/32.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/33.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/4 (2).jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/4.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/5.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/6.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/7.jpg" alt="" />
-      </div>
-
-      <div class="photo-grid-item">
-        <img src="Image/Gallery/8.jpg" alt="" />
+        <img src="{% static 'media/gr3.jpg' %}" alt="" />
       </div>
       <div class="photo-grid-item">
-        <img src="Image/Gallery/9.jpg" alt="" />
+        <img src="{% static 'media/gr4.jpg' %}" alt="" />
       </div>
-
       <div class="photo-grid-item">
-        <img src="Image/Gallery/about.jpg" alt="" />
+        <img src="{% static 'media/gr5.jpg' %}" alt="" />
       </div>
-
       <div class="photo-grid-item">
-        <img src="Image/Gallery/work1.jpg" alt="" />
+        <img src="{% static 'media/gr6.jpg' %}" alt="" />
       </div>
-
       <div class="photo-grid-item">
-        <img src="Image/Gallery/work2.jpg" alt="" />
+        <img src="{% static 'media/gr7.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr8.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr9.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr10.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr11.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr12.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr13.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr14.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr15.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr16.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr17.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/gr18.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/grp.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/grp2.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/group.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/grps.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/puvn.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/mam1.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/old.jpeg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/sara.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/movie.jpg' %}" alt="" />
+      </div>
+      <div class="photo-grid-item">
+        <img src="{% static 'media/mams.jpg' %}" alt="" />
       </div>
     </section>
 
@@ -210,11 +136,12 @@
             <div class="footer-col">
                 <h4>MENU</h4>
                 <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="Course.html">Courses</a></li>
-                  <li><a href="Gallery.html">Gallery</a></li>
-                  <li><a href="About.html">About</a></li>
-                  <li><a href="Contact.html">Contact</a></li>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'course' %}">Course</a></li>
+                  <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
+                  <li><a href="">Registration</a></li>
               </ul>
             </div>
             <div class="footer-col">
@@ -230,10 +157,10 @@
             <div class="footer-col">
                 <h4>COURSE</h4>
                 <ul>
-                  <li><a href="Course.html">Python</a></li>
-                  <li><a href="Course.html">Data Science</a></li>
-                  <li><a href="Course.html">Fullstack developer</a></li>
-                  <li><a href="Course.html">Web Devlopment</a></li>
+                  <li><a href="{% url 'course' %}">python</a></li>
+                  <li><a href="{% url 'course' %}">Data Science</a></li>
+                  <li><a href="{% url 'course' %}">fullstack developer</a></li>
+                  <li><a href="{% url 'course' %}">Web Devlopment</a></li>
               </ul>
             </div>
             <div class="footer-col">
@@ -250,10 +177,10 @@
         
 </footer>
 <div class="designed">
-  <h3>Web Designed <a href="https://www.instagram.com/mr_white_spirit_/" target="_blank"><span>Puvan</span></a></h3>
+  <h3>Updated By <a href="https://www.instagram.com/crazy_phoenix_/" target="_blank"><span method=""> John</span></a></h3>
 </div>
 
-<script src="js/js.js"></script>
+<script src="{% static 'js/js.js' %}"></script>
 
 </body>
 </html>
