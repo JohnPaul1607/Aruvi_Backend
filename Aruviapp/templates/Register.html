@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'media/Aruvilogo.png' type='image/png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/Index.css' type='text/css'%}"/>
+    <title>Aruvi Institute</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <nav>
+        <div class="nav-links">
+            <div class="nav-logo">
+                <img class="nav-logo-img" src="{% static 'media/Aruvilogo.png' %}" alt="Logo" width="48px" height="48px">
+                <h2 class="nav-logo-text">Aruvi</h2>
+            </div>
+
+            <ul class="mob-nav">
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'course' %}">Course</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'register' %}">Registration</a></li>
+            </ul>
+            <div class="menu-btn">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>  
+    </nav>
+   <form action="{% url 'register' %}" method="POST">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button style="padding:7px;" type="submit">Submit</button>
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}
+ </form>
+</body>
+</html>

@@ -173,7 +173,7 @@ div.content{
 }
 #qots{
     font-size: 30px;
-    color: var(--green);
+    color: var(--black);
 }
 .course-details-row{
     display: flex;
