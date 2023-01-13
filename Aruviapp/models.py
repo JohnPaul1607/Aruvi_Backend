@@ -24,7 +24,6 @@ class student(models.Model):
         ("Machine Learning","Machine Learning"),
         ("Full Stack Web Development","Full Stack Web Development"),
         ("C Programming","C Programming"),
+        ("DataBase","DataBase"),
     )
     course=models.CharField(choices=Course_choise,max_length=100)
-    father_name=models.CharField(max_length=100)
-    mother_name=models.CharField(max_length=100)
