@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{% static 'media/Aruvilogo.png' type='image/png' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="{% static 'css/Index.css' type='text/css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/Registration.css' type='text/css'%}"/>
     <title>Aruvi Institute</title>
+    <style>
+        body{
+           background-color: #dff0d8;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -34,13 +40,21 @@
             </div>
         </div>  
     </nav>
-   <form action="{% url 'register' %}" method="POST">
-    {{form.as_p}}
+    <div class="reg">
+   <form action="{% url 'register' %}" method="POST" style="margin-top:35px;margin-bottom:50px">
+    <h1 class="display-5">Registration</h1>
     {% csrf_token %}
+    <div class="container-fluid">
+    {{form.as_p}}
+    <br>
     <button style="padding:7px;" type="submit">Submit</button>
+   </div>
+</div>
+   <div class="alert alert-success">
     {% for message in messages %}
     {{message}}
     {% endfor %}
+   </div>
  </form>
 </body>
 </html>

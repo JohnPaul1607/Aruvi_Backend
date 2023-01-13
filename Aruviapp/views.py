@@ -41,5 +41,7 @@ def register(request):
     myuser=RegisterStudent(request.POST or None)
     if myuser.is_valid():
         myuser.save()
-        messages.success(request,"Thnx for your intrest")
-    return render(request,"Register.html",{"form":myuser})
+        messages.success(request,"Welcome To Our AruviFamily")
+        return redirect('register')
+    return render(request,"Register.html",{"form": myuser})
+

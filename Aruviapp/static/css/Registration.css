@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kreon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* List Syle */
+li{
+    list-style: none;
+    
+}
+/* Scroll Behavior */
+html{
+    
+    scroll-behavior:smooth;
+}
+/* Color Variable */
+:root{
+    --white:#FFF;
+    --softwhite:#f2fff0;
+    --lightwhite:#cfffcd;
+    --darkwhite:#D8D8D8;
+    --skyblue:#88F7FE;
+    --blue:#66A6FF;
+    --black:#0a0a0a;
+    --darkblue:#040429;
+    --green: green;
+    
+}
+/* Header Section */
+a{
+    text-decoration: none;
+    color: var(--darkblue);
+    
+}
+h1,h2,h3,h4{
+    font-family: 'Readex Pro', sans-serif;
+}
+p{
+    font-family: 'Kreon', serif;
+}
+/* Nav Section*/
+
+
+nav{
+   z-index: 999999;
+    height: 15%;
+    background-color: var(--softwhite);
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 8px#24262b;
+}
+.nav-links{
+    align-items: center;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+}
+.menu-btn{
+    display:none;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 60%;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+nav ul li:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.menu-btn{
+    width: 30px;
+    height: 20px;
+    display: none;
+    cursor: pointer;
+}
+div .nav-logo{
+    display: flex;
+    align-items: center;
+}
+div .nav-logo-text{
+    font-size: 2em;
+    margin-left: 5%;
+    font-family: 'Readex Pro', sans-serif;
+}
+.reg{
+    left: 40%;
+    top: 15%;
+    position: absolute;
+}
