@@ -93,7 +93,7 @@ div .nav-logo-text{
     margin-left: 5%;
 }
 
-/* Mani Section */
+/* Main Section */
 
 .main-container{
     display: flex;
@@ -136,6 +136,9 @@ div .nav-logo-text{
     width: 90%;
     transform: scale(1.3);
     object-fit: cover;
+}
+.reg{
+    padding:5px;
 }
   /* Footer Section */
   .footer{

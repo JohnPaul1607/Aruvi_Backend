@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{% static 'media/Aruvilogo.png' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href=" {% static 'css/About.css' %}" rel="stylesheet" >
+    <link href=" {% static 'css/register.css' %}" rel="stylesheet" >
     <title>Aruvi Institute</title>
 </head>
 <body>
@@ -34,12 +34,12 @@
         </div>  
     </nav>
 
-<!-- Main About Section -->
+<!-- Main Section -->
 <div class="reg">
     <form action="{% url 'register' %}" method="POST" style="margin-top:35px;margin-bottom:50px">
      {%csrf_token %}
      <h1 class="display-5">Registration</h1>
-     <div>
+     <div class="forms">
      {{form.as_p}}
      <br>
      <button style="padding:7px;" type="submit">Submit</button>
