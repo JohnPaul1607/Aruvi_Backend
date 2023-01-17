@@ -173,7 +173,7 @@ div.content{
 }
 #qots{
     font-size: 30px;
-    color: var(--black);
+    color: rgb(228, 17, 52);
 }
 .course-details-row{
     display: flex;
@@ -539,7 +539,10 @@ width: 100%;
         justify-content: center;
         align-items: center;
     }
-    
+    #qots{
+        font-size: 20px;
+        color: rgb(228, 17, 52);
+    }
 }
 @media only screen and (max-width: 400px){
     section div.landing{
@@ -601,6 +604,10 @@ width: 100%;
         font-size: small;
         width: 90%;
     }
+    #qots{
+        font-size: 10px;
+        color: rgb(228, 17, 52);
+    }
 }
 @media only screen and (max-width: 276px){
     .main-title{
@@ -613,5 +620,9 @@ width: 100%;
       .course-section{
         padding: 0;
       }
-}
+      #qots{
+        font-size: 5px;
+        color: rgb(228, 17, 52);
+    }
+    }
 
