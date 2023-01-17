@@ -3,6 +3,7 @@ from .models import*
 from django.contrib  import messages
 from.forms import RegisterStudent
 from django.contrib.auth.models import User
+
 # Create your views here.
 def home(request):
     return render(request,'index.html')
