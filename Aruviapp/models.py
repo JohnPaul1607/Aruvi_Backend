@@ -6,7 +6,7 @@ class student(models.Model):
     Name=models.CharField(max_length=100)
     Mobile=models.IntegerField()
     Email=models.EmailField(max_length=100)
-    Data_of_birth=models.DateField()
+    Date_of_birth=models.DateField()
     Gender_choise=(
         ("male","Male"),
         ("female","Female"),
