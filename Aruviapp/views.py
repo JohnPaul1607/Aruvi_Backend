@@ -28,30 +28,12 @@ def about(request):
 def contact(request):
     return render(request,'Contact.html')
 
-# def register(request):
-#     if request.method=="POST":
-#         name=request.POST['name']
-#         mobile=request.POST['mobile']
-#         email=request.POST['email']
-#         date_of_birth=request.POST['date_of_birth']
-#         gender=request.POST['gender']
-#         age=request.POST['age']
-#         passed_year=request.POST['passed_year']
-#         degree=request.POST['degree']
-#         course=request.POST['course']
-        
-
-#         myuser=User.objects.create_user(name,email,mobile)
-#         myuser.save()
-#         return redirect('register')
-#     return render(request,"Register.html")
-
-
 def register(request):
-    myuser=RegisterStudent(request.POST or None)
+    myuser=RegisterStudent(request.POST)
     if myuser.is_valid():
         myuser.save()
-        messages.success(request,"f'Hi{student.Name},thank you for registering in Aruvi Institute of Learning .Welcome to Aruvi'")
+        username=myuser.cleaned_data.get('name')
+        messages.success(request,f' Hi {username} , thank you for register in Aruvi Institute of Learning.  Welcome to Aruvi')
 
         return redirect('register')
     return render(request,"Register.html",{"form": myuser})
@@ -69,13 +51,6 @@ def studentlist(request,format=None):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data,status=status.HTTP_201_CREATED)
-
-# def post(self,request):
-#     if request.method=='POST':
-#         serializer=studentSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data,status=status.HTTP_201_CREATED)
 
 @api_view(['GET','PUT','DELETE'])
 def studentdetails(request,pk,format=None):
@@ -95,7 +70,7 @@ def studentdetails(request,pk,format=None):
         return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
         
     elif request.method=='DELETE':
-        student.delete()
+        student.delete(stud)
         return Response(status=status.HTTP_404_NOT_FOUND)
 
 
