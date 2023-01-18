@@ -93,7 +93,10 @@ div .nav-logo-text{
 }
 
 /* Main Section */
-
+.success{
+    font-size: 20px;
+    color: aqua;
+}
 
 .reg{
     padding-left: 35%;

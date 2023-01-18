@@ -1,0 +1,84 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'media/Aruvilogo.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href=" {% static 'css/register.css' %}" rel="stylesheet" >
+    <title>Aruvi Institute</title>
+
+    <!-- Header Section -->
+    <nav>
+        <div class="nav-links">
+            <div class="nav-logo">
+                <img class="nav-logo-img" src="{% static 'media/Aruvilogo.png' %}" alt="Logo" width="48px" height="48px">
+                <h2 class="nav-logo-text">Aruvi</h2>
+            </div>
+            <ul class="mob-nav">
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'course' %}">Course</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'signup' %}">Registration</a></li>
+            </ul>
+            <div class="menu-btn">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>  
+    </nav>
+
+    <form action="signup/" method="post">
+        {% csrf_token %}
+    <section>
+    <div class="container">
+      <h2>Sign Up</h2>
+    <div class="row100">
+        <div class="col">
+            <div class="inputbox">
+                <input type="text" id="Name" name="Name"  required="required">
+                <span class="text">Username</span>
+                <span class="line"></span>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+            <div class="inputbox">
+                <input type="text" id="Email"  name="Email" required="required">
+                <span class="text">Email</span>
+                <span class="line"></span>
+            </div>
+        </div>
+    <div class="row100">
+        <div class="col">
+            <div class="inputbox">
+                <input type="password" id="pass1" name="pass1" required="required">
+                <span class="text">password</span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row100">
+        <div class="col">
+                <button style="padding: 10px;" type="submit">Signup</button>
+        </div>
+    </div>
+   </div>
+   
+   </section>
+   </form>
+</body>
+</html>

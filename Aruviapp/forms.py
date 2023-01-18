@@ -7,7 +7,7 @@ class RegisterStudent(forms.ModelForm):
         model=student
         fields="__all__"
     widget={
-        'Name':forms.TextInput(attrs={'class':'form-control','placeholder':'Ex: John'}),"\n"
+        'Name':forms.TextInput(attrs={'class':'form-control','placeholder':'Ex: John'}),
         'Mobile':forms.NumberInput(attrs={'class':'form-control','placeholder':'Ex: 9876543210'}),
         'Email':forms.TextInput(attrs={'class':'form-control','placeholder':'Ex: john@gmail.com'}),
         'Date_of_birth':forms.DateInput(attrs={'class':'form-control','placeholder':'Ex: 16/07/2000'}),
