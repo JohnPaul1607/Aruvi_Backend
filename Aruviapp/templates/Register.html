@@ -25,6 +25,7 @@
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="{% url 'register' %}">Registration</a></li>
+                <li><a href="">Admin Login</a></li>
             </ul>
             <div class="menu-btn">
                 <div class="line1"></div>
@@ -35,79 +36,170 @@
     </nav>
 
 <!-- Main Section -->
-<div class="reg">
-    <form action="{% url 'register' %}" method="POST" style="margin-top:35px;margin-bottom:50px">
+<form action="{% url 'register' %}" method="POST">
      {%csrf_token %}
-     <h1 class="display-5">Registration</h1>
-     <div class="forms">
-     {{form.as_p}}
-     <br>
-     <button style="padding:7px;" type="submit">Submit</button>
+     <section>
+        <div class="container">
+            <h1>Registration</h1>
+        <div class="row100">
+            <div class="col">
+                <div class="inputbox">
+                    {{form.name}}
+                    <!-- <input type="text" id="name" name="name" required="required"> -->
+                    <span class="text">NAME</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputbox">
+                    {{form.mobile}}
+                    <!-- <input type="number" id="mobile" name="mobile"  required="required"> -->
+                    <span class="text">MOBILE</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputbox">
+                    {{form.email}}
+                    <!-- <input type="text" id="email" name="email" required="required"> -->
+                    <span class="text">EMAIL</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputbox">
+                    {{form.date_of_birth}}
+                
+                    <span class="text">Date Of Birth (m/d/y)</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputbox">
+                    <label for="gender">Gender :</label>
+                    {{form.gender}}
+                    <!-- <select name="gender" id="gender" required="required">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select> -->
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputbox">
+                    {{form.age}}
+                    <!-- <input type="text" id="age" name="age" required="required"> -->
+                    <span class="text">Age</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputbox">
+                    {{form.academic_year}}
+                    <!-- <input type="text" id="year" name="passed_year" required="required"> -->
+                    <span class="text">Academic Year</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputbox">
+                   {{form.degree}}
+                    <!-- <input type="text" id="degree" name="degree" required="required"> -->
+                    <span class="text">Degree</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputbox">
+                    <label for="course">Choose a Course:</label>
+                    {{form.course}}
+                    <!-- <select name="course" id="course" required="required">
+                    <option value="Python">Python</option>
+                    <option value="Java">Jave</option>
+                    <option value="Full_Stack_Python">Full Stack Development With Python</option>
+                    <option value="Full_Stack_Java">Full Stack Development With Java</option>
+                    <option value="DS">Data Science - ML and AI</option>
+                    <option value="Db">Data Base</option>
+                    <option value="C">C programing</option>
+                    <option value="Web">Web Devlopment</option>
+                    </select>  -->
+                </div>
+            </div>
+        </div>
+    <div class="row100">
+        <div class="col">
+                <button style="padding: 10px;" type="submit">Register</button>
+        </div>
     </div>
- </div>
+</div>
     <div class="success">
      {% if messages %}
         {% for message in messages %}
          {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
-
         {% endfor %}
-
     {% endif %}
     </div>
   </form>
-
-<hr>
-    <!-- Footer Section  -->
-
-    <footer class="footer">
-        <div class="footer-row">
-            
-            <div class="footer-col">
-                <h4>MENU</h4>
-                <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'course' %}">Course</a></li>
-                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                    <li><a href="{% url 'register' %}">Registration</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>IDLE DOWNLOAD</h4>
-                <ul>
-                    <li><a href="https://www.python.org/downloads/">python</a></li>
-                    <li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
-                    <li><a href="https://www.anaconda.com/products/individualf ">Anaconda</a></li>
-                    <li><a href="https://www.jetbrains.com/pycharm/download/#section=windows">PyCharm</a></li>
-                    <li><a href="https://www.sublimetext.com/3">Sublime text</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>COURSE</h4>
-                <ul>
-                    <li><a href="{% url 'course' %}">python</a></li>
-                    <li><a href="{% url 'course' %}">Data Science</a></li>
-                    <li><a href="{% url 'course' %}">fullstack developer</a></li>
-                    <li><a href="{% url 'course' %}">Web Devlopment</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Follow us</h4>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/aruviinstitute.tenkasi"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/AruviOf"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/aruvi_python_learning/?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/c/AruviTechNews"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-        </div>
-        
-</footer>
+</section>
+  <hr>
+  <div>
+  <footer class="footer">
+          <div class="footer-row">
+              
+              <div class="footer-col">
+                  <h4>MENU</h4>
+                  <ul>
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li><a href="{% url 'course' %}">Course</a></li>
+                      <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                      <li><a href="{% url 'about' %}">About</a></li>
+                      <li><a href="{% url 'contact' %}">Contact</a></li>
+                      <li><a href="% url 'register' %}">Registration</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>IDLE DOWNLOAD</h4>
+                  <ul>
+                      <li><a href="https://www.python.org/downloads/">Python</a></li>
+                      <li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+                      <li><a href="https://www.anaconda.com/products/individualf ">Anaconda</a></li>
+                      <li><a href="https://www.jetbrains.com/pycharm/download/#section=windows">PyCharm</a></li>
+                      <li><a href="https://www.sublimetext.com/3">Sublime text</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>COURSE</h4>
+                  <ul>
+                      <li><a href="{% url 'course' %}">python</a></li>
+                      <li><a href="{% url 'course' %}">Data Science</a></li>
+                      <li><a href="{% url 'course' %}">fullstack developer</a></li>
+                      <li><a href="{% url 'course' %}">Web Devlopment</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Follow us</h4>
+                  <div class="social-links">
+                      <a href="https://www.facebook.com/aruviinstitute.tenkasi"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://twitter.com/AruviOf"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com/aruvi_python_learning/?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.youtube.com/c/AruviTechNews"><i class="fab fa-youtube"></i></a>
+                  </div>
+              </div>
+              
+          </div>
+  </footer>
+  </div>
 <div class="designed">
-    <h3>Updated By <a href="https://www.instagram.com/crazy_phoenix_/" target="_blank"><span method=""> John</span></a></h3>
+  <h3>Updated By <a href="https://www.instagram.com/crazy_phoenix_/" target="_blank"><span method=""> John</span></a></h3>
 </div>
+
 
   <script src="{% static 'js/js.js' %}"></script>
 </body>
