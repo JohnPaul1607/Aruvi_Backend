@@ -1,0 +1,6 @@
+<h1>Student details</h1>
+<ol>
+{% for student in data %}
+   <li>{{student.name}}-----{{student.email}}-----{{student.mobile}}----{{student.degree}}----{{student.course}}<br><br></li>
+{% endfor %}
+</ol>
