@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/login.css'%}"/>
+  <title>Login</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-links">
+        <div class="nav-logo">
+            <img class="nav-logo-img" src="{% static 'media/Aruvilogo.png' %}" alt="Logo" width="48px" height="48px">
+            <h2 class="nav-logo-text">Aruvi</h2>
+        </div>
+        <ul class="mob-nav">
+            <li><a class="active" href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'course' %}">Course</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'register' %}">Registration</a></li>
+            <li><a href="{% url 'login' %}">Admin Login</a></li>
+        </ul>
+        <div class="menu-btn">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>  
+</nav>
+<div>
+    <form  action="{% url 'login' %}" method="POST">
+      <h1>Admin  Login</h1>
+      {% csrf_token %}
+      <div class="inputbox">
+        <input type="text" id="username" name="username" placeholder="Username" style="width:150px;height: 16px;"><br><br>
+        <input type="password" id="pass1" name="pass1" placeholder="Password" style="width:150px;height: 16px;"><br><br>
+        <button type="submit"style="width:50px;height:30px;">Login</button>
+      </div>
+    </form>
+    </div>
+</body>
+</html>
