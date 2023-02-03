@@ -1,15 +1,16 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
 class student(models.Model):
-    Name=models.CharField(max_length=100)
-    Mobile=models.IntegerField()
-    Email=models.EmailField(max_length=100)
-    Date_of_birth=models.DateField()
+    name=models.CharField(max_length=100)
+    mobile=models.CharField(max_length=12)
+    email=models.EmailField(max_length=100)
+    date_of_birth=models.DateField(null=True)
     Gender_choise=(
-        ("male","Male"),
-        ("female","Female"),
+        ("Male","Male"),
+        ("Female","Female"),
     )
     age=models.IntegerField()
     gender=models.CharField(choices=Gender_choise,max_length=10)

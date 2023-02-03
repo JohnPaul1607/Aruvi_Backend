@@ -3,21 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kreon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
 /* List Syle */
 li{
     list-style: none;
-    
 }
 /* Scroll Behavior */
 html{
-    
+    background-color: var(--lightwhite);
     scroll-behavior:smooth;
 }
 /* Color Variable */
@@ -25,31 +22,32 @@ html{
     --white:#FFF;
     --softwhite:#f2fff0;
     --lightwhite:#cfffcd;
+    --lightpurple:#C282FA;
+    --ligghtvoilet:#6E61CA;
     --darkwhite:#D8D8D8;
     --skyblue:#88F7FE;
     --blue:#66A6FF;
     --black:#0a0a0a;
     --darkblue:#040429;
     --green: green;
+    --lightgreen:#b2fcb2;
     
 }
 /* Header Section */
 a{
     text-decoration: none;
     color: var(--darkblue);
-    
 }
 h1,h2,h3,h4{
     font-family: 'Readex Pro', sans-serif;
 }
 p{
     font-family: 'Kreon', serif;
+    font-weight: 500;
 }
 /* Nav Section*/
-
-
 nav{
-   z-index: 999999;
+    z-index: 999999;
     height: 15%;
     background-color: var(--softwhite);
     position: sticky;
@@ -67,7 +65,6 @@ nav{
 .menu-btn{
     display:none;
 }
-
 nav ul{
     display: flex;
     list-style: none;
@@ -86,17 +83,17 @@ nav ul li:hover{
     height: 20px;
     display: none;
     cursor: pointer;
+    margin-right: 3%;
 }
 div .nav-logo{
     display: flex;
     align-items: center;
 }
 div .nav-logo-text{
+    font-family: 'Readex Pro', sans-serif;
     font-size: 2em;
     margin-left: 5%;
-    font-family: 'Readex Pro', sans-serif;
 }
-
 /* Main Section */
 section div.landing{
     display:flex;
