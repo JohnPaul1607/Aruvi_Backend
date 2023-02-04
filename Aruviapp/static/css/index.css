@@ -3,21 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kreon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
 /* List Syle */
 li{
     list-style: none;
-    
 }
 /* Scroll Behavior */
 html{
-    
+    background-color: var(--lightwhite);
     scroll-behavior:smooth;
 }
 /* Color Variable */
@@ -25,68 +22,115 @@ html{
     --white:#FFF;
     --softwhite:#f2fff0;
     --lightwhite:#cfffcd;
+    --lightpurple:#C282FA;
+    --ligghtvoilet:#6E61CA;
     --darkwhite:#D8D8D8;
     --skyblue:#88F7FE;
     --blue:#66A6FF;
     --black:#0a0a0a;
     --darkblue:#040429;
     --green: green;
+    --lightgreen:#b2fcb2;
     
 }
 /* Header Section */
 a{
     text-decoration: none;
     color: var(--darkblue);
-    
 }
 h1,h2,h3,h4{
     font-family: 'Readex Pro', sans-serif;
 }
 p{
     font-family: 'Kreon', serif;
+    font-weight: 500;
 }
 /* Nav Section*/
-
-
 nav{
-   z-index: 999999;
-    height: 15%;
-    background-color: var(--softwhite);
-    position: sticky;
-    top: 0;
-    box-shadow: 0px 0px 8px#24262b;
-}
+    z-index: 999999;
+     height: 15%;
+     background-color:#b2fcb2;
+     position: sticky;
+     top: 0;
+     box-shadow: 0px 0px 8px#24262b;
+ }
 .nav-links{
     align-items: center;
     display: flex;
-    width: 90%;
+    width: 65%;
     height: 100%;
-    margin: auto;
+    margin:10px;
     justify-content: space-between;
 }
-.menu-btn{
-    display:none;
-}
-
-nav ul{
-    display: flex;
+  nav ul {
     list-style: none;
-    justify-content: space-between;
-    width: 60%;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-}
+    padding: 0px;
+    display: flex;
+    margin-left:50%;
+  }
+  
+  nav li{
+    float: none; 
+    width: 100%;
+
+    margin-left: 20px;
+  }
+  
+  nav li a{
+    display: block; 
+    width: 100%; 
+    padding: 10px;
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 2;
+    text-decoration: none;
+    color: #0b0b0b;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+  }
 nav ul li:hover{
     transform: scale(1.1);
     transition: .3s;
+}
+  nav li a:hover{ border-bottom: 0px; color: #fcfafa;}
+  nav li:nth-child(2) a{ border-left: 10px solid #b2fcb2; }
+  nav li:first-child a{ border-left: 10px solid #b2fcb2; }
+  nav li:nth-child(3) a{ border-left: 10px solid #b2fcb2; }
+  nav li:nth-child(4) a{ border-left: 10px solid #b2fcb2; }
+  nav li:nth-child(5) a{ border-left: 10px solid #b2fcb2; }
+  nav li:last-child a{ border-left: 10px solid #b2fcb2;}
+  
+nav li a:after { 
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0px;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+    z-index: -1;
+  }
+  nav li a:hover:after{ width: 100%; }
+  nav li:first-child a:after{ background: #3498db; }
+  nav li:nth-child(2) a:after{ background: #a43509; }
+  nav li:nth-child(3) a:after{ background: #f0776c; }
+  nav li:nth-child(4) a:after{ background: #3b1fd5; }
+  nav li:nth-child(5) a:after{ background: #ca21a5; }
+  nav li:last-child a:after{ background: #1abc9c; }
+
+.menu-btn{
+    display:none;
 }
 
 .menu-btn{
     width: 30px;
     height: 20px;
-    display: none;
-    cursor: pointer;
+    font-family: 'Readex Pro', sans-serif;
+    color:var(--darkblue);
 }
+
 div .nav-logo{
     display: flex;
     align-items: center;
@@ -129,12 +173,12 @@ div.content{
     animation-iteration-count:infinite;
     cursor: default;
 }
-@keyframes title {
+/* @keyframes title {
     0%  {color:var(--darkblue); left:200px; top:0px;}
     50%  {color:var(--lightpurple); left:200px; top:200px;}
     75%  {color:var(--ligghtvoilet); left:0px; top:200px;}
     100% {color:var(--darkblue); left:0px; top:0px;}
-  }
+  } */
 .qoutes{
     font-family: 'Readex Pro', sans-serif;
     font-size: 2em;
@@ -487,7 +531,7 @@ width: 100%;
         width: 50%;
         height: 50%;
         font-size: 16px;
-        background-color: var(--softwhite);
+        background-color:#b2fcb2;
         text-align: center;
         transform: translateX(100%);
         cursor: pointer;
