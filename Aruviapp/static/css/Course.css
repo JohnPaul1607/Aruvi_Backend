@@ -62,9 +62,6 @@ nav{
     margin: auto;
     justify-content: space-between;
 }
-.menu-btn{
-    display:none;
-}
 nav ul{
     display: flex;
     list-style: none;
@@ -77,7 +74,9 @@ nav ul li:hover{
     transform: scale(1.1);
     transition: .3s;
 }
-
+.menu-btn{
+    display: none;
+}
 .menu-btn{
     width: 30px;
     height: 20px;
@@ -95,7 +94,7 @@ div .nav-logo-text{
     margin-left: 5%;
 }
 
-/* Mani Section */
+/* Main Section */
 h1{
     text-align: center;
     background-color: var(--lightgreen);
