@@ -46,35 +46,77 @@ p{
 /* Nav Section*/
 nav{
     z-index: 999999;
-    height: 15%;
-    background-color: var(--softwhite);
-    position: sticky;
-    top: 0;
-    box-shadow: 0px 0px 8px#24262b;
-}
+     height: 15%;
+     background-color:#b2fcb2;
+     position: sticky;
+     top: 0;
+     box-shadow: 0px 0px 8px#24262b;
+ }
 .nav-links{
     align-items: center;
     display: flex;
-    width: 90%;
+    width: 65%;
     height: 100%;
-    margin: auto;
+    margin:10px;
     justify-content: space-between;
 }
-.menu-btn{
-    display:none;
-}
-nav ul{
-    display: flex;
+  nav ul {
     list-style: none;
-    justify-content: space-between;
-    width: 60%;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-}
+    padding: 0px;
+    display: flex;
+    margin-left:50%;
+  }
+  
+  nav li{
+    float: none; 
+    width: 100%;
+
+    margin-left: 20px;
+  }
+  
+  nav li a{
+    display: block; 
+    width: 100%; 
+    padding: 10px;
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 2;
+    text-decoration: none;
+    color: #0b0b0b;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+  }
 nav ul li:hover{
     transform: scale(1.1);
     transition: .3s;
 }
+  nav li a:hover{ border-bottom: 0px; color: #fcfafa;}
+  nav li:nth-child(2) a{ border-left: 10px solid #b2fcb2; }
+  nav li:first-child a{ border-left: 10px solid #b2fcb2; }
+  nav li:nth-child(3) a{ border-left: 10px solid #b2fcb2; }
+  nav li:nth-child(4) a{ border-left: 10px solid #b2fcb2; }
+  nav li:nth-child(5) a{ border-left: 10px solid #b2fcb2; }
+  nav li:last-child a{ border-left: 10px solid #b2fcb2;}
+  
+nav li a:after { 
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0px;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+    z-index: -1;
+  }
+  nav li a:hover:after{ width: 100%; }
+  nav li:first-child a:after{ background: #3498db; }
+  nav li:nth-child(2) a:after{ background: #a43509; }
+  nav li:nth-child(3) a:after{ background: #f0776c; }
+  nav li:nth-child(4) a:after{ background: #3b1fd5; }
+  nav li:nth-child(5) a:after{ background: #ca21a5; }
+  nav li:last-child a:after{ background: #1abc9c; }
 
 .menu-btn{
     width: 30px;
