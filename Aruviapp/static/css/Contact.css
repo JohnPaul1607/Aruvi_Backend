@@ -126,13 +126,12 @@ nav li a:after {
     z-index: -1;
   }
   nav li a:hover:after{ width: 100%; }
-  nav li:first-child a:after{ background: #3498db; }
-  nav li:nth-child(2) a:after{ background: #a43509; }
-  nav li:nth-child(3) a:after{ background: #f0776c; }
-  nav li:nth-child(4) a:after{ background: #3b1fd5; }
-  nav li:nth-child(5) a:after{ background: #ca21a5; }
-  nav li:last-child a:after{ background: #1abc9c; }
-
+  nav li:first-child a:after{ background: red; }
+  nav li:nth-child(2) a:after{ background: orange; }
+  nav li:nth-child(3) a:after{ background: yellow; }
+  nav li:nth-child(4) a:after{ background: green; }
+  nav li:nth-child(5) a:after{ background: var(--blue); }
+  nav li:last-child a:after{ background: indigo; }
 .menu-btn{
     width: 30px;
     height: 20px;
