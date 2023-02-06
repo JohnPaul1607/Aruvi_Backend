@@ -123,7 +123,13 @@ nav li a:after {
 .menu-btn{
     display:none;
 }
-
+nav li a:hover:after{ width: 100%; }
+nav li:first-child a:after{ background: red; }
+nav li:nth-child(2) a:after{ background: orange; }
+nav li:nth-child(3) a:after{ background: yellow; }
+nav li:nth-child(4) a:after{ background: green; }
+nav li:nth-child(5) a:after{ background: var(--blue); }
+nav li:last-child a:after{ background: indigo; }
 .menu-btn{
     width: 30px;
     height: 20px;
