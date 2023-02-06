@@ -124,7 +124,7 @@ nav li:nth-child(3) a:after{ background: yellow; }
 nav li:nth-child(4) a:after{ background: green; }
 nav li:nth-child(5) a:after{ background: var(--blue); }
 nav li:nth-child(6) a:after{ background:indigo; }
-nav li:last-child a:after{ background: rgb(114, 21, 181); }
+nav li:last-child a:after{ background: rgb(86, 16, 167); }
 .menu-btn{
     width: 30px;
     height: 20px;
@@ -150,7 +150,7 @@ section{
     min-height: 100vh;
     padding: 20px;
     width: 100%;
-    background: #266783;
+    background: #5eb8a0;
 }
 .container{
     position: relative;
@@ -412,7 +412,7 @@ padding-left: 0;
         width: 50%;
         height: 50%;
         font-size: 16px;
-        background-color: var(--softwhite);
+        background-color:#b2fcb2;
         text-align: center;
         transform: translateX(100%);
         cursor: pointer;

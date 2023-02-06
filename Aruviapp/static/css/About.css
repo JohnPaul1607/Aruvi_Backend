@@ -339,7 +339,7 @@ padding-left: 0;
         width: 50%;
         height: 50%;
         font-size: 16px;
-        background-color: var(--softwhite);
+        background-color:#b2fcb2;
         text-align: center;
         transform: translateX(100%);
         cursor: pointer;
