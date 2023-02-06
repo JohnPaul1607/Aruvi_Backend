@@ -69,13 +69,13 @@ nav{
     list-style: none;
     padding: 0px;
     display: flex;
-    margin-left:50%;
+    margin-left:70%;
   }
   
   nav li{
     float: none; 
     width: 100%;
-    margin-left: 20px;
+    margin-left: 5px;
   }
   
   nav li a{
@@ -150,7 +150,8 @@ section{
     min-height: 100vh;
     padding: 20px;
     width: 100%;
-    background: #5eb8a0;
+    background:url(../media/backround.jpg);
+    background-size: cover;
 }
 .container{
     position: relative;

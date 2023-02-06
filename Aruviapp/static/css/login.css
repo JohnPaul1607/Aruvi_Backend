@@ -66,14 +66,14 @@ nav{
     list-style: none;
     padding: 0px;
     display: flex;
-    margin-left:50%;
+    margin-left:70%;
   }
   
   nav li{
     float: none; 
     width: 100%;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 5px;
   }
   
   nav li a{
@@ -93,7 +93,7 @@ nav ul li:hover{
     transform: scale(1.1);
     transition: .3s;
 }
-  nav li a:hover{ border-bottom: 0px; color: #fcfafa;}
+  nav li a:hover{ border-bottom: 0px; color: #b2fcb2;}
   nav li:nth-child(2) a{ border-left: 10px solid #b2fcb2; }
   nav li:first-child a{ border-left: 10px solid #b2fcb2; }
   nav li:nth-child(3) a{ border-left: 10px solid #b2fcb2; }
@@ -113,12 +113,12 @@ nav li a:after {
     z-index: -1;
   }
   nav li a:hover:after{ width: 100%; }
-  nav li:first-child a:after{ background: #3498db; }
-  nav li:nth-child(2) a:after{ background: #a43509; }
-  nav li:nth-child(3) a:after{ background: #f0776c; }
-  nav li:nth-child(4) a:after{ background: #3b1fd5; }
-  nav li:nth-child(5) a:after{ background: #ca21a5; }
-  nav li:last-child a:after{ background: #1abc9c; }
+  nav li:first-child a:after{ background: red; }
+  nav li:nth-child(2) a:after{ background: orange; }
+  nav li:nth-child(3) a:after{ background: green; }
+  nav li:nth-child(4) a:after{ background: var(--blue); }
+  nav li:nth-child(5) a:after{ background: indigo; }
+  nav li:last-child a:after{ background: purple; }
 
 .menu-btn{
     display:none;
@@ -145,6 +145,10 @@ div .nav-logo-text{
     text-align: center;
     padding-top:10%;
 }
+.bg{
+    background: url(../media/backround1.jpg);
+    background-size: cover;
+}
 
 /* Mobile views */
 
@@ -162,7 +166,7 @@ div .nav-logo-text{
         align-items: center;
     }
 }
-
+/* Mobile View */
 @media only screen and (max-width: 700px){
     .nav-links{
         width: 90%;
