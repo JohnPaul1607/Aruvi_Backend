@@ -14,8 +14,7 @@ html{
 }
 body{
     overflow-x: hidden;
-     background: url(../media/backround1.jpg);
-    background-size: cover;
+
 }
 /* Color Variable */
 :root{
@@ -147,11 +146,6 @@ div .nav-logo-text{
     text-align: center;
     padding-top:10%;
 }
-.bg{
-    background: url(../media/backround1.jpg);
-    background-size: cover;
-}
-
 /* Mobile views */
 
 @media only screen and (max-width: 992px) {
