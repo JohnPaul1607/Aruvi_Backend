@@ -33,6 +33,9 @@ html{
     --lightgreen:#b2fcb2;
     
 }
+body{
+    background: #cfffcd;
+}
 /* Header Section */
 a{
     text-decoration: none;
@@ -72,7 +75,7 @@ nav{
   nav li{
     float: none; 
     width: 100%;
-
+    font-weight: bold;
     margin-left: 20px;
   }
   
